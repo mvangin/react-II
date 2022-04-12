@@ -1,17 +1,16 @@
 import logo from './logo.svg';
 import './App.css';
+import { useEffect, useState} from 'react';
+import ReusableTable from "./ReusableTable/ReusableTable"
+import {data} from "./data"
 
 function App() {
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>Build an autocomplete field in React</p> 
-        <p>or</p>
-        <p>Build a reusable table</p>
-      </header>
-    </div>
-  );
+    <ReusableTable 
+      data={data} 
+      colsToFilter={["name","address","street"]}/>
+  )
 }
 
 export default App;
